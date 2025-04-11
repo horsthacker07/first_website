@@ -11,5 +11,15 @@
 <body>
     <h1>A first GitHub project</h1><hr>
     <p>This project is currently developed by Horst Hacker</p>
+
+    <button onclick="callAPI()">Coole Liste vom Backend anzeigen lassen</button>
+
+    <script>
+        async function callAPI() {
+            const response = await fetch("https://first-website-backend-spv7.onrender.com/api/hello");
+            const data = await response.json();
+            alert(data.message);
+        }
+    </script>
 </body>
 </html>
